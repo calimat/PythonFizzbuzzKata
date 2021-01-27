@@ -1,21 +1,21 @@
 import unittest
+from fizbuzzKata import transform
 
-def transform(number):
-    return number
 
 class TestSum(unittest.TestCase):
-    def test_transform_returnsArrayValueWith1(self):
-        array = [1]
-        result = transform(array)
-        self.assertEqual(result, [1])
-    def test_transform_returnsArrayValueWith1And2(self):
-        array = [1,2]
-        result = transform(array)
-        self.assertEqual(result, [1,2])
-    def test_transform_returnsArrayValueWith1And2AndFizz(self):
-        array = [1,2, 3]
-        result = transform(array)
-        self.assertEqual(result, [1,2, "Fizz"])
+    def test_transform_returnsArrayValueWithEmptyList(self):
+        fizzbuzzList = []
+        result = transform(fizzbuzzList)
+        self.assertEqual(result,[])
+    def testListWIht1_transform_returnsListWithValue1(self):
+        fizzbuzzList = [1]
+        result = transform(fizzbuzzList)
+        self.assertEqual(result,[1])
+    def testListWIht1and2_transform_returnsListWithValue1and2(self):
+        fizzbuzzList = [1,2]
+        result = transform(fizzbuzzList)
+        self.assertEqual(result,[1,2])
+        
 
 if __name__ == '__main__':
     unittest.main()
