@@ -15,6 +15,10 @@ class TestSum(unittest.TestCase):
         fizzbuzzList = [1,2]
         result = transform(fizzbuzzList)
         self.assertEqual(result,[1,2])
+    def testListWIht12And3_transform_returnsListWithValue12AndFizz(self):
+        fizzbuzzList = [1,2, 3]
+        result = transform(fizzbuzzList)
+        self.assertEqual(result,[1,2, 'Fizz'])
         
 
 if __name__ == '__main__':
